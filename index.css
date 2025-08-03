@@ -49,7 +49,9 @@ nav {
   height: 110px;
   width:auto;
   object-fit: contain;
-  margin-left: 30px;  
+  margin-left: 30px; 
+  position: relative;
+  z-index: 1; 
 }
 /* ===== Title Styling ===== */
 .title {
@@ -60,6 +62,7 @@ nav {
   margin: 80px 0 0 25px;
   position: relative;
   left: 1px;
+  z-index: 3;
 }
 .rules {
     background-color: rgba(255, 255, 255, 0.3); /* subtle blur-like translucent effect */
