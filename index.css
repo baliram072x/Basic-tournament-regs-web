@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-/* ===== Reset & base ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,10 +13,9 @@ body {
   font-family: Arial, sans-serif;
   color: #fff;
   line-height: 1.3;
-  padding-top: 70px; /* offset fixed nav */
+  padding-top: 70px; 
 }
 
-/* ===== Navbar ===== */
 nav {
   position: fixed;
   top: 0;
@@ -39,7 +38,6 @@ nav {
   display: block;
 }
 
-/* burger (mobile) */
 .burger {
   display: none;
   background: none;
@@ -59,7 +57,6 @@ nav {
   border-radius: 2px;
 }
 
-/* links */
 .nav_links {
   display: flex;
 }
@@ -84,7 +81,6 @@ nav {
   color: #fff;
 }
 
-/* ===== Title ===== */
 .title {
   font-family: 'Creepster', cursive;
   font-size: clamp(2.2rem, 5vw, 4rem);
@@ -95,7 +91,6 @@ nav {
   z-index: 3;
 }
 
-/* ===== Rules box ===== */
 .rules {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
@@ -119,7 +114,6 @@ nav {
   list-style: disc inside;
 }
 
-/* Register button */
 .register_btn {
   display: block;
   margin: 25px auto 60px;
@@ -139,7 +133,7 @@ nav {
   color: #fff;
 }
 
-/* hide scrollbar but allow scroll */
+
 html, body {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -149,11 +143,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* wrapper to keep rules on left with space to right */
+
 .rules-wrapper {
   display: flex;
   gap: 0;
-  margin: 30px 1rem 10px; /* adjust horizontal inset if needed */
+  margin: 30px 1rem 10px; 
   max-width: 100%;
 }
 
@@ -164,7 +158,7 @@ body::-webkit-scrollbar {
   border-radius: 10px;
   font-size: 1rem;
   color: #fff;
-  flex: 0 0 65%; /* takes ~65% width on large screens */
+  flex: 0 0 65%; 
   min-width: 300px;
   box-sizing: border-box;
 }
@@ -183,12 +177,12 @@ body::-webkit-scrollbar {
   list-style: disc inside;
 }
 
-/* spacer simply fills remaining space */
+
 .rules-spacer {
   flex: 1;
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 992px) {
   .rules {
     margin: 20px 15px;

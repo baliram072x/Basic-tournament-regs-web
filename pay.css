@@ -1,23 +1,23 @@
 /* import font */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
-/* reset/base */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html, body {
-  overflow-x: hidden; /* prevent right shift */
+  overflow-x: hidden; 
   font-family: 'Outfit', system-ui, sans-serif;
   background: radial-gradient(circle at 30% 40%, #0f0f17 0%, #0a0a12 85%);
   color: #e6e6ec;
   min-height: 100vh;
   line-height: 1.4;
-  padding-top: 70px; /* offset fixed navbar */
+  padding-top: 70px; 
 }
 
-/* NAVBAR */
+
 nav {
   position: fixed;
   top: 0;
@@ -40,9 +40,9 @@ nav {
   display: block;
 }
 
-/* Burger */
+
 .burger {
-  display: none; /* enabled in mobile media query */
+  display: none; 
   background: none;
   border: none;
   cursor: pointer;
@@ -61,7 +61,7 @@ nav {
   border-radius: 2px;
 }
 
-/* links */
+
 .nav_links {
   display: flex;
 }
@@ -86,14 +86,14 @@ nav {
   color: #fff;
 }
 
-/* main wrapper */
+
 .main-content {
   display: flex;
   justify-content: center;
   padding: 1rem;
 }
 
-/* form container */
+
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -121,7 +121,7 @@ nav {
   z-index: 0;
 }
 
-/* form */
+
 .contact-left {
   flex: 1 1 500px;
   display: flex;
@@ -151,7 +151,6 @@ h4 {
   margin-bottom: 8px;
 }
 
-/* inputs */
 .contact-inputs,
 input[type="email"],
 input[type="text"],
@@ -179,7 +178,7 @@ input:focus {
   transform: translateY(-1px);
 }
 
-/* subscription */
+
 .subscription-note {
   font-size: 0.9rem;
   color: #e6e6ec;
@@ -193,7 +192,7 @@ input:focus {
   text-decoration: underline;
 }
 
-/* payment */
+
 .payment-section label {
   display: block;
   margin-bottom: 12px;
@@ -205,14 +204,14 @@ input:focus {
   font-weight: 600;
 }
 
-/* confirmation notes */
+
 .confirmation-notes h3 {
   font-size: 0.9rem;
   margin: 6px 0;
   font-weight: 500;
 }
 
-/* submit */
+
 button[type="submit"] {
   cursor: pointer;
   border: none;
@@ -232,13 +231,13 @@ button[type="submit"]:hover {
   transform: translateY(-1px);
 }
 
-/* optional right pane */
+
 .contact-right {
   flex: 1 1 280px;
   display: none;
 }
 
-/* link defaults */
+
 a {
   color: #ffe066;
   text-decoration: none;
@@ -247,14 +246,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 992px) {
   .contact-container {
     padding: 1.5rem;
   }
 }
 
-/* mobile menu & layout */
+
 @media (max-width: 800px) {
   .burger {
     display: flex;
