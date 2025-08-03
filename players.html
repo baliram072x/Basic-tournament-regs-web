@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Registered Players</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     /* base reset */
-    * { box-sizing:border-box; }
-    html, body {
-      margin:0;
-      padding:0;
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
       overflow-x: hidden;
-      font-family: system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: #0f172a;
       color: #f0f5ff;
       min-height: 100%;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     /* navbar */
     nav {
@@ -35,11 +43,13 @@
       backdrop-filter: blur(6px);
       z-index: 1000;
     }
+
     .nav_logo img {
       height: 45px;
       object-fit: contain;
       display: block;
     }
+
     .burger {
       display: none;
       background: none;
@@ -51,15 +61,18 @@
       align-items: center;
       justify-content: center;
     }
+
     .burger .bar {
       width: 22px;
       height: 3px;
       background: #fff;
       border-radius: 2px;
     }
+
     .nav_links {
       display: flex;
     }
+
     .nav_links ul {
       display: flex;
       list-style: none;
@@ -68,6 +81,7 @@
       padding: 0;
       align-items: center;
     }
+
     .nav_links a {
       color: #fff;
       text-decoration: none;
@@ -77,7 +91,8 @@
       transition: background 0.2s, color 0.2s;
       font-size: 0.9rem;
     }
-    .nav_links a:hover{
+
+    .nav_links a:hover {
       background: #ff5f3d;
       color: #fff;
     }
@@ -86,7 +101,8 @@
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 100px 20px 40px; /* top padding to offset fixed nav */
+      padding: 100px 20px 40px;
+      /* top padding to offset fixed nav */
     }
 
     .header {
@@ -97,10 +113,12 @@
       align-items: flex-start;
       margin-bottom: 20px;
     }
+
     .title-block {
       flex: 1;
       min-width: 220px;
     }
+
     h1 {
       margin: 0;
       font-size: 1.9rem;
@@ -108,25 +126,29 @@
       text-align: center;
       padding: 18px 0;
     }
+
     .subtitle {
       font-size: 0.9rem;
       color: #a0aecd;
       margin-top: 4px;
     }
+
     .summary {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
       margin-top: 4px;
     }
+
     .card {
       background: #1f2f55;
       padding: 16px 20px;
       border-radius: 8px;
       min-width: 120px;
       flex: none;
-      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
     }
+
     .card .label {
       display: block;
       font-size: 0.6rem;
@@ -135,6 +157,7 @@
       color: #9aa7c1;
       margin-bottom: 6px;
     }
+
     .card .value {
       font-size: 1.4rem;
       font-weight: 700;
@@ -146,30 +169,36 @@
       background: #1f2f55;
       padding: 12px;
       border-radius: 8px;
-      box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5);
+      box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.5);
       margin-bottom: 16px;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.95rem;
       margin: 0;
     }
+
     thead {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
     }
-    th, td {
+
+    th,
+    td {
       padding: 12px 10px;
       text-align: left;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       white-space: nowrap;
     }
+
     th {
       font-weight: 600;
       letter-spacing: 0.5px;
     }
+
     tr:hover {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
     }
 
     .badge {
@@ -181,9 +210,21 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-    .paid { background: #22c55e; color: #0f172a; }
-    .pending { background: #eab308; color: #0f172a; }
-    .fee { font-weight: 600; }
+
+    .paid {
+      background: #22c55e;
+      color: #0f172a;
+    }
+
+    .pending {
+      background: #eab308;
+      color: #0f172a;
+    }
+
+    .fee {
+      font-weight: 600;
+    }
+
     .small {
       font-size: 0.75rem;
       color: #9aa7c1;
@@ -199,16 +240,25 @@
 
     /* responsive */
     @media (max-width: 900px) {
-      .header { flex-direction: column; }
-      .summary { width: 100%; }
+      .header {
+        flex-direction: column;
+      }
+
+      .summary {
+        width: 100%;
+      }
     }
+
     @media (max-width: 800px) {
-      .burger { display: flex; }
+      .burger {
+        display: flex;
+      }
+
       .nav_links {
         position: fixed;
         top: 60px;
         right: 0;
-        background: rgba(20,20,35,0.97);
+        background: rgba(20, 20, 35, 0.97);
         width: 100%;
         max-width: 260px;
         height: calc(100vh - 60px);
@@ -220,7 +270,11 @@
         z-index: 1100;
         overflow-y: auto;
       }
-      .nav_links.open { transform: translateX(0); }
+
+      .nav_links.open {
+        transform: translateX(0);
+      }
+
       .nav_links ul {
         flex-direction: column;
         gap: 12px;
@@ -228,6 +282,7 @@
         margin: 0;
         list-style: none;
       }
+
       .nav_links a {
         padding: 10px 16px;
         font-size: 1rem;
@@ -235,6 +290,7 @@
     }
   </style>
 </head>
+
 <body>
   <nav>
     <div class="nav_logo">
@@ -272,11 +328,11 @@
         <!-- optionally put cards like total registered / spots left -->
         <div class="card">
           <span class="label">Registered</span>
-          <span class="value">05 / 48</span>
+          <span class="value">02 / 48</span>
         </div>
         <div class="card">
           <span class="label">Spots Left</span>
-          <span class="value">43</span>
+          <span class="value">46</span>
         </div>
       </div>
     </div>
@@ -293,48 +349,27 @@
             <th>Payment Status</th>
             <th>Registration Date</th>
           </tr>
+
         </thead>
         <tbody>
           <tr>
-            <td>Shiv Kumar</td>
-            <td>56624723</td>
+            <td>Shiv Mundhe</td>
+            <td>1563818519</td>
             <td>Free Fire</td>
             <td class="fee">₹50</td>
             <td><span class="badge paid">Paid</span></td>
-            <td>Aug 1, 2025 02:12 PM</td>
+            <td>Aug 3, 2025 02:45PM</td>
           </tr>
+
           <tr>
-            <td>Ayesha Patil</td>
-            <td>956268346</td>
+            <td>Baliram Rathod</td>
+            <td>27251700508</td>
             <td>Free Fire</td>
-            <td class="fee">₹50</td>
-            <td><span class="badge pending">Pending</span></td>
-            <td>Aug 2, 2025 09:30 AM</td>
+            <td class="fee">₹750</td>
+            <td><span class="badge paid">paid</span></td>
+            <td>Aug 3, 2025 23:45PM</td>
           </tr>
-          <tr>
-            <td>Rahul Singh</td>
-            <td>PUBG789</td>
-            <td>Free Fire</td>
-            <td class="fee">₹50</td>
-            <td><span class="badge paid">Paid</span></td>
-            <td>Aug 2, 2025 11:05 AM</td>
-          </tr>
-          <tr>
-            <td>Sanket Sharma</td>
-            <td>462362323</td>
-            <td>Free Fire</td>
-            <td class="fee">₹50</td>
-            <td><span class="badge paid">Paid</span></td>
-            <td>Aug 2, 2025 11:05 AM</td>
-          </tr>
-          <tr>
-            <td>Priya Darshini</td>
-            <td>5622246246</td>
-            <td>Free Fire</td>
-            <td class="fee">₹50</td>
-            <td><span class="badge pending">Pending</span></td>
-            <td>Aug 2, 2025 11:05 AM</td>
-          </tr>
+
           <!-- more rows here -->
         </tbody>
       </table>
@@ -342,10 +377,10 @@
 
     <h3>Your payment will be verified within 30 minutes; after that you will be added to the tournament group.</h3>
   </div>
-<footer style="text-align:center; padding:12px; font-size:0.8rem; background: rgba(20, 20, 35, 0.95); color:white;">
-  <div>This website created by Shiv Mundhe & Baliram Rathod.</div>
-  <div>&copy; 2025 All rights reserved.</div>
-</footer>
+  <footer style="text-align:center; padding:12px; font-size:0.8rem; background: rgba(20, 20, 35, 0.95); color:white;">
+    <div>This website created by Shiv Mundhe & Baliram Rathod.</div>
+    <div>&copy; 2025 All rights reserved.</div>
+  </footer>
   <script>
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav_links');
@@ -356,4 +391,5 @@
     });
   </script>
 </body>
+
 </html>
