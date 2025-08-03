@@ -3,39 +3,118 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meet the Organizers</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Font Awesome Free via CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-pbVnYIYxXhXqXjZP9n8h0+Z+9cKk6Yv5xv4t1v0EyYtJkYkP6G3QFZJgd6+WmV7L6Hf5Rjz8Xj/Q3h0fK+X0A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
+    /* reset & base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html,
     body {
-      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      font-family: 'Poppins', system-ui, sans-serif;
       background: #0f172a;
       color: white;
       line-height: 1.6;
+      min-height: 100%;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem 0 1.5rem;
+      gap: 1rem;
+      background: rgba(20, 20, 35, 0.95);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+    }
+
+    .nav_logo img {
+      height: 45px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .burger .bar {
+      width: 22px;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    .nav_links {
+      display: flex;
+    }
+
+    .nav_links ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+
+    .nav_links a {
+      color: #fff;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: background 0.2s;
+      font-size: 0.9rem;
+    }
+
+    .nav_links a:hover{
+      background: #ff5f3d;
+      color: #fff;
+    }
+
+    /* container */
     .container {
       max-width: 1200px;
-      margin: auto;
-      padding: 50px 20px;
+      margin: 0 auto;
+      padding: 100px 20px 60px; /* offset for fixed nav */
       text-align: center;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: clamp(2rem, 2.8vw, 2.8rem);
       color: #facc15;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .team {
@@ -43,61 +122,167 @@
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
+      margin-bottom: 40px;
     }
 
     .member {
       background: #1e293b;
-      padding: 30px;
+      padding: 25px 20px;
       border-radius: 15px;
-      width: 320px;
+      width: 100%;
+      max-width: 320px;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .member:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.6);
     }
 
     .member img {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       border: 4px solid #facc15;
       object-fit: cover;
     }
 
     .member h3 {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
+      font-size: 1.4rem;
+      margin-bottom: 6px;
       color: #facc15;
     }
 
     .member p {
       font-size: 1rem;
       color: #ddd;
+      margin-bottom: 10px;
     }
 
     .socials {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     .socials a {
-      margin: 0 10px;
+      margin: 0 8px;
       color: white;
-      font-size: 1.6rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
+      font-size: 1.4rem;
+      transition: color 0.25s ease;
     }
 
     .socials a:hover {
       color: #facc15;
     }
+
+    /* query line centered */
+    .query-wrapper {
+      margin: 40px auto 60px;
+      text-align: center;
+      padding: 0 10px;
+      font-size: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      row-gap: 8px;
+    }
+
+    .query-wrapper h3 {
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .btn-instagram {
+      display: inline-block;
+      background: #ffcc00;
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: filter .2s;
+      text-decoration: none;
+    }
+
+    .btn-instagram:hover {
+      filter: brightness(0.9);
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .team {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .burger {
+        display: flex;
+      }
+
+      .nav_links {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        background: rgba(20, 20, 35, 0.97);
+        width: 100%;
+        max-width: 260px;
+        height: calc(100vh - 60px);
+        transform: translateX(100%);
+        transition: transform .25s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        z-index: 1100;
+        overflow-y: auto;
+      }
+
+      .nav_links.open {
+        transform: translateX(0);
+      }
+
+      .nav_links ul {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .nav_links a {
+        padding: 10px 16px;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 
 <body>
+
+  <nav>
+    <div class="nav_logo">
+      <a href="index.html" aria-label="Home">
+        <img src="img/Garena-Free-Fire-Logo-PNG-HD-Images.png" alt="Free Fire Logo" />
+      </a>
+    </div>
+    <button class="burger" aria-label="Menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="nav_links">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/players.html">Participated Player</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/pay.html" class="active">Registration</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div class="container">
     <h1>Meet the Organizers</h1>
@@ -108,28 +293,45 @@
         <h3>Shiv</h3>
         <p>Founder & Head Organizer</p>
         <div class="socials">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-instagram"></a>
-          <!-- fallback text if icons fail -->
-
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
       <div class="member">
-        <img src="/bali.jpg" alt="Akshat">
+        <img src="/bali.jpg" alt="Baliram">
         <h3>Baliram</h3>
         <p>Event Coordinator</p>
         <div class="socials">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
     </div>
-  </div>
 
+    <div class="query-wrapper">
+      <h3>For any query you can DM us on Instagram</h3>
+      <a href="https://www.instagram.com/shiv_mundhe_7/" class="btn-instagram" target="_blank" rel="noopener">
+        Click Here
+      </a>
+    </div>
+  </div>
+<footer style="text-align:center; padding:12px; font-size:0.8rem; background: rgba(20, 20, 35, 0.95); color:white;">
+  <div>This website created by Shiv Mundhe & Baliram Rathod.</div>
+  <div>&copy; 2025 All rights reserved.</div>
+</footer>
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav_links');
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', (!expanded).toString());
+      navLinks.classList.toggle('open');
+    });
+  </script>
 </body>
 
 </html>

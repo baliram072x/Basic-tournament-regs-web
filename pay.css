@@ -1,313 +1,113 @@
-<<<<<<< HEAD
-    /* reset & base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Outfit', system-ui, sans-serif;
-      background: radial-gradient(circle at 30% 40%, #0f0f17 0%, #0a0a12 85%);
-      color: #e6e6ec;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-    h2 { font-size: 2rem; color: #fff; margin-bottom: 6px; }
-    hr {
-      border: none;
-      height: 5px;
-      width: 120px;
-      background: linear-gradient(135deg, #fa6d86 0%, #ff994f 60%);
-      border-radius: 10px;
-      margin-top: 4px;
-      margin-bottom: 10px;
-    }
-=======
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-
-/* reset & base */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
-body {
-  font-family: 'Outfit', system-ui, sans-serif;
-  background: radial-gradient(circle at 30% 40%, #0f0f17 0%, #0a0a12 85%);
-  color: #e6e6ec;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-h2 {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 6px;
-}
-hr {
-  border: none;
-  height: 5px;
-  width: 120px;
-  background: linear-gradient(135deg, #fa6d86 0%, #ff994f 60%);
-  border-radius: 10px;
-  margin-top: 4px;
-}
->>>>>>> d4ab4880ecf3edf4ed5ae8dc5d3bb44a510dc030
-
-    /* container */
-    .contact-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      width: 100%;
-      max-width: 920px;
-      background: #1e1e2a;
-      padding: 2rem 2.5rem;
-      border-radius: 24px;
-      box-shadow: 0 40px 80px -20px rgba(250, 109, 134, 0.25);
-      position: relative;
-      overflow: hidden;
-    }
-    .contact-container::before {
-      content: "";
-      position: absolute;
-      top: -70px;
-      right: -90px;
-      width: 220px;
-      height: 220px;
-      background: linear-gradient(135deg, #fa6d86 0%, #ff994f 60%);
-      filter: blur(100px);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
-    /* form */
-    .contact-left {
-      flex: 1 1 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      position: relative;
-      z-index: 1;
-    }
-    .contact-left-title h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    /* inputs */
-    .contact-inputs,
-    input[type="email"],
-    input[type="text"],
-    input[type="number"],
-    input[type="date"],
-    input[type="time"],
-    select {
-      width: 100%;
-      padding: 14px 20px;
-      border-radius: 999px;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      font-weight: 500;
-      background: #1b1b2f;
-      color: #fff;
-      transition: .25s ease;
-      box-shadow: inset 0 8px 20px -5px rgba(255,255,255,0.03);
-      margin-bottom: 12px;
-      appearance: none;
-    }
-    .contact-inputs::placeholder,
-    input::placeholder,
-    select::-ms-expand { display: none; }
-    input:focus,
-    select:focus {
-      box-shadow: 0 0 0 3px rgba(255, 153, 79, 0.5);
-      transform: translateY(-1px);
-    }
-
-    /* dropdown wrapper for arrow */
-    .select-wrapper {
-      position: relative;
-    }
-    .select-wrapper::after {
-      content: "▾";
-      position: absolute;
-      right: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-      color: #a0aecd;
-      font-size: 0.9rem;
-    }
-
-    /* file upload label */
-    label.upload-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      background: #1b1b2f;
-      padding: 14px 18px;
-      border-radius: 18px;
-      position: relative;
-      color: #fff;
-      border: 2px solid transparent;
-      transition: .25s ease;
-      margin-bottom: 12px;
-    }
-    label.upload-wrapper:hover {
-      border-color: rgba(255, 153, 79, 0.6);
-    }
-    label.upload-wrapper input[type="file"] {
-      margin-top: 6px;
-      cursor: pointer;
-      border-radius: 8px;
-      padding: 6px;
-      background: #0f172a;
-    }
-
-    /* submit */
-    button[type="submit"] {
-      cursor: pointer;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 999px;
-      font-size: 1rem;
-      font-weight: 600;
-      background: linear-gradient(135deg, #fa6d86 0%, #ff994f 60%);
-      color: #fff;
-      transition: .25s ease;
-      align-self: flex-start;
-      box-shadow: 0 20px 50px -10px rgba(250, 109, 134, 0.4);
-      margin-top: 6px;
-    }
-    button[type="submit"]:hover {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
-    }
-
-    /* right pane (unused) */
-    .contact-right {
-      flex: 1 1 280px;
-      display: none;
-    }
-
-    /* small text */
-    .note {
-      font-size: 0.9rem;
-      margin-top: 4px;
-      line-height: 1.2;
-      color: #d1d7ee;
-    }
-
-    /* responsive */
-    @media (max-width: 900px) {
-      .contact-container {
-        flex-direction: column;
-        padding: 1.5rem;
-      }
-      .contact-right {
-        display: none;
-      }
-      .contact-left-title h2 {
-        font-size: 1.9rem;
-      }
-      button[type="submit"] {
-        width: 100%;
-        text-align: center;
-      }
-    }
-    a { color: #ffe066; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-<<<<<<< HEAD
-    
-=======
-/* submit */
-button[type="submit"] {
-  cursor: pointer;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #fa6d86 0%, #ff994f 60%);
-  color: #fff;
-  transition: .25s ease;
-  align-self: flex-start;
-  box-shadow: 0 20px 50px -10px rgba(255,105,150,0.4);
-}
-
-button[type="submit"]:hover {
-  filter: brightness(1.05);
-  transform: translateY(-1px);
-}
-
-/* layout adjustments */
-.contact-right {
-  flex: 1 1 260px;
-  /* placeholder; you can put an illustration, rules, or tournament info here */
-}
-
-/* responsive */
-@media (max-width: 900px) {
-  .contact-container {
-    flex-direction: column;
-    padding: 1.5rem;
-  }
-
-  .contact-right {
-    display: none;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  button[type="submit"] {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Reset + base */
+/* reset/base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
+html, body {
+  overflow-x: hidden; /* prevent right shift */
   font-family: 'Outfit', system-ui, sans-serif;
   background: radial-gradient(circle at 30% 40%, #0f0f17 0%, #0a0a12 85%);
   color: #e6e6ec;
   min-height: 100vh;
+  line-height: 1.4;
+  padding-top: 70px; /* offset fixed navbar */
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
+  padding: 0 1rem 0 1.5rem;
+  gap: 1rem;
+  justify-content: space-between;
+  background: rgba(20, 20, 35, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1200;
+}
+
+.nav_logo img {
+  height: 45px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Burger */
+.burger {
+  display: none; /* enabled in mobile media query */
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1300;
+}
+.burger .bar {
+  width: 22px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* links */
+.nav_links {
+  display: flex;
+}
+.nav_links ul {
+  display: flex;
+  list-style: none;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+.nav_links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background .2s;
+  font-size: 0.9rem;
+}
+.nav_links a:hover {
+  background: #ff5f3d;
+  color: #fff;
+}
+
+/* main wrapper */
+.main-content {
+  display: flex;
   justify-content: center;
   padding: 1rem;
 }
 
-/* Container */
+/* form container */
 .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   width: 100%;
   max-width: 920px;
   background: #1e1e2a;
   padding: 2rem 2.5rem;
-  border-radius: 20px;
-  display: flex;
-  gap: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 40px 80px -20px rgba(250, 109, 134, 0.25);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 40px 80px -20px rgba(250, 109, 134, 0.25);
+  margin: 0 auto;
 }
-
-/* Accent glow */
 .contact-container::before {
   content: "";
   position: absolute;
@@ -321,17 +121,15 @@ body {
   z-index: 0;
 }
 
-/* Form side */
+/* form */
 .contact-left {
   flex: 1 1 500px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
   position: relative;
   z-index: 1;
 }
-
-/* Title */
 .contact-left-title h2 {
   font-size: 2.2rem;
   font-weight: 700;
@@ -346,12 +144,20 @@ body {
   margin-top: 6px;
   margin-bottom: 10px;
 }
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d1d7ee;
+  margin-bottom: 8px;
+}
 
-/* Inputs */
+/* inputs */
 .contact-inputs,
 input[type="email"],
 input[type="text"],
-input[type="date"] {
+input[type="number"],
+input[type="date"],
+input[type="time"] {
   width: 100%;
   padding: 14px 20px;
   border-radius: 999px;
@@ -363,47 +169,50 @@ input[type="date"] {
   color: #fff;
   transition: .25s ease;
   box-shadow: inset 0 8px 20px -5px rgba(255,255,255,0.03);
-  margin-bottom: 12px;
 }
-
 .contact-inputs::placeholder,
 input::placeholder {
   color: #8a8aad;
 }
-
-.contact-inputs:focus,
 input:focus {
   box-shadow: 0 0 0 3px rgba(255, 153, 79, 0.5);
   transform: translateY(-1px);
 }
 
-/* File upload label */
-label.upload-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-weight: 600;
+/* subscription */
+.subscription-note {
   font-size: 0.9rem;
-  background: #1b1b2f;
-  padding: 14px 18px;
-  border-radius: 18px;
-  position: relative;
-  color: #fff;
-  border: 2px solid transparent;
-  transition: .25s ease;
+  color: #e6e6ec;
+  margin: 1em 0;
+}
+.subscription-note a {
+  color: #ffe066;
+  text-decoration: none;
+}
+.subscription-note a:hover {
+  text-decoration: underline;
+}
+
+/* payment */
+.payment-section label {
+  display: block;
   margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+.upi-id h3 {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
-label.upload-wrapper:hover {
-  border-color: rgba(255, 153, 79, 0.6);
+/* confirmation notes */
+.confirmation-notes h3 {
+  font-size: 0.9rem;
+  margin: 6px 0;
+  font-weight: 500;
 }
 
-label.upload-wrapper input[type="file"] {
-  margin-top: 6px;
-  cursor: pointer;
-}
-
-/* Submit button */
+/* submit */
 button[type="submit"] {
   cursor: pointer;
   border: none;
@@ -418,36 +227,75 @@ button[type="submit"] {
   box-shadow: 0 20px 50px -10px rgba(250, 109, 134, 0.4);
   margin-top: 6px;
 }
-
 button[type="submit"]:hover {
   filter: brightness(1.05);
   transform: translateY(-1px);
 }
 
-/* Right pane (optional content) */
+/* optional right pane */
 .contact-right {
   flex: 1 1 280px;
-  display: none; /* hide if not used */
+  display: none;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* link defaults */
+a {
+  color: #ffe066;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
   .contact-container {
-    flex-direction: column;
     padding: 1.5rem;
   }
+}
 
-  .contact-right {
-    display: none;
+/* mobile menu & layout */
+@media (max-width: 800px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav_links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: rgba(20, 20, 35, 0.97);
+    width: 100%;
+    max-width: 260px;
+    height: calc(100vh - 60px);
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 1100;
+    overflow-y: auto;
+  }
+  .nav_links.open {
+    transform: translateX(0);
+  }
+  .nav_links ul {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .nav_links a {
+    padding: 10px 16px;
+    font-size: 1rem;
   }
 
   .contact-left-title h2 {
     font-size: 1.9rem;
   }
-
   button[type="submit"] {
     width: 100%;
     text-align: center;
   }
 }
->>>>>>> d4ab4880ecf3edf4ed5ae8dc5d3bb44a510dc030

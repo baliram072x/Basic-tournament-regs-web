@@ -2,45 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freefire Tournament</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav_logo">
-            <img src="img/Garena-Free-Fire-Logo-PNG-HD-Images.png" alt="">
-
-        </div>
-        <div class="nav_links">
-            <ul>
-                <li><a href="/players.html">Participated Player</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/pay.html">Registration</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="title">
-        <h1>FREEFIRE TOURNAMENT</h1>
+  <nav>
+    <div class="nav_logo">
+      <a href="index.html" aria-label="Home">
+        <img src="img/Garena-Free-Fire-Logo-PNG-HD-Images.png" alt="Free Fire Logo" />
+      </a>
     </div>
-    <div class="rules">
-        <h2>TOURNAMENT RULES :-</h2>
-        <ul>
-            <li>The tournament will be held once every 3 days</li>
-            <li>Almost 100 players can play the tournament</li>
-            <li>the clan code will be send to the player to their email address</li>
-            <li>individual amount to be paid is 20 rupees</li>
-            <li>the reward amount per kill is 10rs</li>
-            <li>1 kill=10 rs | 2kills= 20rs | 3kills= |30rs <br> & so on...| first game:...</li>
-        </ul>
-    </div>
-    <button class="register_btn" onclick="window.location.href='pay.html';">
-  Register Now & Pay
-</button>
 
+    <button class="burger" aria-label="Menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <div class="nav_links">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/players.html">Participated Player</a></li>
+        <li><a href="/about.html">Ogranizer</a></li>
+        <li><a href="/pay.html" class="active">Registration</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="title">
+    <h1>FREEFIRE TOURNAMENT</h1>
+  </div>
+
+  <div class="rules">
+    <h2>TOURNAMENT RULES :-</h2>
+    <hr>
+    <br>
+    <ul>
+      <li>The tournament will be held by your Organize Name.</li>
+      <li>48 players can play the tournament.</li>
+      <li>The custom ID & Pass will be sent to the players in WhatsApp Group & You will add after Registration Confirmed.</li>
+      <li>Custom Date 05/08/2025 | Time : 3:00 (Custom will Starts after 10 Min)</li>
+      <li>Individual amount to be paid is 40 rupees.</li>
+      <li>The reward amount to the winner is:</li>
+      <li>1st Position : 1000</li>
+      <li>2nd Position : 500</li>
+      <li>3rd Position : 200</li>
+    </ul>
+  </div>
+
+  <button class="register_btn" onclick="window.location.href='pay.html';">
+    Register Now & Pay
+  </button>
+<footer style="text-align:center; padding:12px; font-size:0.8rem; background: rgba(20, 20, 35, 0.95); color:white;">
+  <div>This website created by Shiv Mundhe & Baliram Rathod.</div>
+  <div>&copy; 2025 All rights reserved.</div>
+</footer>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav_links');
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('open');
+    });
+    
+  </script>
 </body>
-<a href=""></a>
+
 </html>
