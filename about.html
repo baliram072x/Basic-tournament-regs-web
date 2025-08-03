@@ -1,104 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Meet the Organizers</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Organizers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Font Awesome Free via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-pbVnYIYxXhXqXjZP9n8h0+Z+9cKk6Yv5xv4t1v0EyYtJkYkP6G3QFZJgd6+WmV7L6Hf5Rjz8Xj/Q3h0fK+X0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- Font Awesome Free via CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-pbVnYIYxXhXqXjZP9n8h0+Z+9cKk6Yv5xv4t1v0EyYtJkYkP6G3QFZJgd6+WmV7L6Hf5Rjz8Xj/Q3h0fK+X0A=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #0f172a;
-    color: white;
-    line-height: 1.6;
-  }
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  h1 {
-    font-size: 2.8rem;
-    color: #facc15;
-    margin-bottom: 40px;
-  }
-  .team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  .member {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 15px;
-    width: 320px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .member:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
-  }
-  .member img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    border: 4px solid #facc15;
-    object-fit: cover;
-  }
-  .member h3 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: #facc15;
-  }
-  .member p {
-    font-size: 1rem;
-    color: #ddd;
-  }
-  .socials {
-    margin-top: 15px;
-  }
-  .socials a {
-    margin: 0 10px;
-    color: white;
-    font-size: 1.6rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  .socials a:hover {
-    color: #facc15;
-  }
-</style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #facc15;
+      margin-bottom: 40px;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .member {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 15px;
+      width: 320px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .member:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+    }
+
+    .member img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #facc15;
+      object-fit: cover;
+    }
+
+    .member h3 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #facc15;
+    }
+
+    .member p {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    .socials {
+      margin-top: 15px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #facc15;
+    }
+  </style>
 </head>
+
 <body>
 
   <div class="container">
     <h1>Meet the Organizers</h1>
     <div class="team">
-      
+
       <div class="member">
         <img src="/channels4_profile.jpg" alt="Shiv">
         <h3>Shiv</h3>
         <p>Founder & Head Organizer</p>
         <div class="socials">
-          <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
           <!-- fallback text if icons fail -->
-          
+
         </div>
       </div>
 
@@ -107,9 +121,9 @@
         <h3>Baliram</h3>
         <p>Event Coordinator</p>
         <div class="socials">
-          <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
         </div>
       </div>
 
@@ -117,4 +131,5 @@
   </div>
 
 </body>
+
 </html>
