@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* ===== Body Styling ===== */
+body {
+  background: url("img/background-image.jpg") center/cover no-repeat;
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* ===== Navigation Links ===== */
+.nav_links ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav_links a:hover {
+  color: #ffcc00;
+}
+
+/* ===== Logo Styling ===== */
+.nav_logo img {
+  height: 110px;
+  width:auto;
+  object-fit: contain;
+  margin-left: 30px;  
+}
+/* ===== Title Styling ===== */
+.title {
+  font-family: 'Creepster', cursive;
+  font-size: 50px;
+  color: #ffcc00;
+  letter-spacing: 2px;
+  margin: 80px 0 0 25px;
+  position: relative;
+  left: 1px;
+}
+.rules {
+    background-color: rgba(255, 255, 255, 0.3); /* subtle blur-like translucent effect */
+    backdrop-filter: blur(3px); /* adds slight background blur */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 70px;
+}
+
+.rules h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: khaki;
+}
+
+.rules ul {
+    font-size: 1.25rem; /* approximate size for <h4> */
+    line-height: 1.6;
+    padding-left: 20px;
+    color: #fff;
+}
+.register_btn {
+    display: block;
+    margin: 20px auto; /* centers the button and adds space from the rules section */
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    background-color:#ffcc00;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.register_btn:hover {
+    background-color:#000;
+    color: #fff;
+}
