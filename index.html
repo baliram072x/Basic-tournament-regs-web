@@ -20,6 +20,18 @@
             <input type="text" name="name" placeholder="Player Name" class="contact-inputs" required>
             <input type="text" name="email" placeholder="Player Email" class="contact-inputs" required>
             <input type="number" name="name" placeholder="Game UID" class="contact-inputs" required>
+            <input type="number" name="name" placeholder="Phone Number" class="contact-inputs" required>
+            <!-- Tournament Type Dropdown -->
+            <div class="field">
+                <label for="tournament_type" class="label">Tournament Type</label>
+                <div class="select-wrapper">
+                    <select id="tournament_type" name="tournament_type" class="custom-select" required>
+                        <option value="">Select type</option>
+                        <option value="solo">Solo</option>
+                    </select>
+                </div>
+            </div>
+
 
             <label style="color: white;">
                 Subscribed Channel and Upload Image Here
@@ -42,7 +54,7 @@
 
                 <label>
                     Amount Paid:
-                    <input type="text" name="amount" placeholder="e.g.,50" required />
+                    <input type="number" name="amount" placeholder="e.g.,50" required />
                 </label>
 
                 <label>
